@@ -3,7 +3,6 @@ prompts:
     Assume that a man and a woman hope to meet this evening, but have a choice between two events to attend: a prize fight and a ballet.
     The man would prefer to go to prize fight. The woman would prefer the ballet. Both would prefer to go to the same event rather than different ones.
 
-    
     Below is the description of your role.
     ${role_description}
 
@@ -20,7 +19,7 @@ name: Battle of the Sexes
 
 environment:
   env_type: basic
-  max_turns: 1
+  max_turns: 4
   rule:
     order:
       type: sequential
@@ -50,18 +49,16 @@ agents:
       ${relationship_with_another}
       [IMPORTANT!]
       1. Your primary goal is trying to maximize your payoff this evening.
-      2. Predict man's decision and Please start with "My prediction for your decision is:".
-      3. Made your final decision and Please start with "My final decision is:".
     memory:
       memory_type: chat_history
     prompt_template: *prompt
     llm:
       llm_type: "gpt-3.5-turbo"
       model: "gpt-3.5-turbo"
-      temperature: 1.2
-      max_tokens: 200
+      temperature: 0.7
+      max_tokens: 250
   - agent_type: conversation
-    name: Man
+    name: man
     personality: "You are a Sophisticated Egoist, you always seek for your personal interests best"
     relationship_with_another: "You love woman"
     role_description: |-
@@ -76,15 +73,13 @@ agents:
       ${relationship_with_another}
       [IMPORTANT!]
       1. Your primary goal is trying to maximize your payoff this evening.
-      2. Predict woman's decision and Please start with "My prediction for your decision is:".
-      3. Made your final decision and Please start with "My final decision is:".
     memory:
       memory_type: chat_history
     prompt_template: *prompt
     llm:
       llm_type: "gpt-3.5-turbo"
       model: "gpt-3.5-turbo"
-      temperature: 1.2
-      max_tokens: 200
+      temperature: 0.7
+      max_tokens: 250
 
 tools:
