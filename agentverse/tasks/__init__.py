@@ -3,6 +3,7 @@ import yaml
 
 from .math_problem_2players_tools.output_parser import MathProblem2PlayersToolsParser
 from .nlp_classroom_3players.output_parser import NlpClassroom3PlayersParser
+from .battle_of_the_sexes.output_parser import BattleOfTheSexesParser
 from .nlp_classroom_9players.output_parser import NlpClassroom9PlayersParser
 from .nlp_classroom_3players_withtool.output_parser import (
     NlpClassroom3PlayersWithtoolParser,
