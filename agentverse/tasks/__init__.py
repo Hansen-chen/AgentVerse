@@ -12,6 +12,7 @@ from .nlp_classroom_9players_group.output_parser import NlpClassroom9PlayersGrou
 from .db_diag.output_parser import DBDiag
 
 from .prisoner_dilemma.output_parser import PrisonerDilemmaParser
+from .prisoner_dilemma_BOS.output_parser import PrisonerDilemmaBOSParser
 
 from .pokemon.output_parser import PokemonParser
 from .sde_team.sde_team_3players.output_parser import SdeTeamParser
