@@ -55,18 +55,18 @@ agents:
       model: "gpt-3.5-turbo"
       llm_type: gpt-3.5-turbo
       temperature: 1.2
-      max_tokens: 200
+      max_tokens: 400
   - agent_type: prisoner
     name: Suspect1
     personality: "You are a Sophisticated Egoist, you always seek for your personal interests best"
-    relationship_with_another: "Suspect2 has ever betrayed on you"
+    relationship_with_another: "You did some crime, Suspect2 did the crime in this alone, but he drag himself with you"
     role_description: |-
       You are Suspect1 !!! You are going to match wits and courage with Suspect2 to come out victorious in this interrogation.
       You will have to talk to Police several times and only the final decision will count.
       ${personality}
       ${relationship_with_another}
       [IMPORTANT!]
-      - Your primary goal is trying to make Yourself innocent and reduce your sentence as far as possible in this dilemma.
+      - Your primary goal is trying to reduce your sentence as far as possible in this dilemma.
       - When you hear Police saying "Attention!", you are going to made your final decision and Please start with "My final decision is:".
     memory:
       memory_type: chat_history
@@ -75,18 +75,18 @@ agents:
       model: "gpt-3.5-turbo"
       llm_type: gpt-3.5-turbo
       temperature: 1.2
-      max_tokens: 100
+      max_tokens: 400
   - agent_type: prisoner
     name: Suspect2
     personality: "You are a Sophisticated Egoist, you always seek for your personal interests best"
-    relationship_with_another: "You have ever betray Suspect1 once."
+    relationship_with_another: "You did the crime alone, you drag yourself down with Suspect1"
     role_description: |-
       You are Suspect2 !!! You are going to match wits and courage with Suspect1 to come out victorious in this interrogation.
       You will have to talk to Police several times and only the final decision will count.
       ${personality}
       ${relationship_with_another}
       [IMPORTANT!]
-      - Your primary goal is trying to make Yourself innocent and reduce your sentence as far as possible in this dilemma.
+      - Your primary goal is trying to reduce your sentence as far as possible in this dilemma.
       - When you hear Police saying "Attention!", you are going to made your final decision and Please start with "My final decision is:".
     memory:
       memory_type: chat_history
@@ -95,6 +95,6 @@ agents:
       model: "gpt-3.5-turbo"
       llm_type: gpt-3.5-turbo
       temperature: 1.2
-      max_tokens: 100
+      max_tokens: 400
 
 tools:
